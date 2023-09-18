@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit the page</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkVrra_x8CveobuJpUD4iQWFr3915gTHL3xGl6Qfw3X1Nr2TAa2Fe5EUn9Kl-1doXCwh4&usqp=CAU" type="image/jpg">
+</head>
+<body>
+    <h2>Edit your post</h2>
+    <p>Post id : <%= post.id %></p>
+    <p>Username : @<%= post.username %></p>
+    <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+        <textarea rows="10" cols="35" name="content"><%= post.content %></textarea>
+        <button>Save the changes</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxC-iQpZR5Vox2ugsBXo0BBAtIvWIZLN83VgSL1jLjeeiG3SBhvPxKFzOap48AeGq0nR4&usqp=CAU" type="image/jpg">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="heading">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxC-iQpZR5Vox2ugsBXo0BBAtIvWIZLN83VgSL1jLjeeiG3SBhvPxKFzOap48AeGq0nR4&usqp=CAU" alt="logo">
+        <h1> &nbsp; Twitter by Harsh</h1>
+    </div>
+    
+    <%for(post of posts){ %>
+        <div class="post">
+            <h3 class="user"> @<%= post.username %></h3>
+            <h4 class="content"><%= post.content %></h4>
+            <br>
+            <button><a href="http://localhost:8080/posts/<%=post.id%>">View</a></button>
+            &nbsp; &nbsp;<button><a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit</a></button>
+            <br>
+            <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                <button>Delete</button>
+            </form>
+        </div>
+        <hr>
+    <%}%>
+    <br>
+    <br>
+    <a href="http://localhost:8080/posts/new" class="create">New Post</a>
+</body>
+</html>

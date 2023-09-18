@@ -1,0 +1,44 @@
+body{
+    color: white;
+    background-color:black;
+}
+
+.post{
+    background-color:skyblue ;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 13%;
+}
+
+img{
+    height: 35px;
+    width: 35px;
+}
+.heading{
+    display: flex;
+    align-items: center;
+}
+.user{
+    font-style: italic;
+    color: black;
+    
+}
+.create{
+    margin-left: 13%;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 1px 1px;
+}
+.content{
+    color: rgba(187, 12, 240, 0.856);
+}
+button{
+    color: black;
+    background-color: rgb(204, 50, 114);
+    
+}
+button a{
+    color: white;
+    background-color: rgb(204, 50, 109);
+}
